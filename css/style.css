@@ -30,7 +30,7 @@ a {
 	margin: 0px 20px 0px 20px;
 	border-bottom: 2px solid transparent;
 }
-a:hover {
+nav a:hover {
 	color: white;
 }
 h2 {
