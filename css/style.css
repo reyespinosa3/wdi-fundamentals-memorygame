@@ -79,3 +79,9 @@ font-size: 0;
 	color: #F15B31;
 	font-weight: 700;
 }
+.button {
+	background-color: #4CAF50;
+	border: solid;
+	color: #FFFFFF;
+	font-size: 24px;
+}
