@@ -34,6 +34,9 @@ var flippedCards = document.getElementsByClassName('flipped');
 //variable to track score
 var score = 0;
 
+//variable to track difficulty
+var d = 0;
+
 //function to confirm 2 cards have been flipped
 //generate pop-up for player to see if a match
 //was made or not, add 1 point for a match and
@@ -89,6 +92,18 @@ var resetBoard = function() {
 		flippedCards[i].setAttribute('src', "images/back.png");
 		score = 0;
 		document.getElementById('score').textContent = 0;
+	}
+	};
+
+//used to randomize card placement on game board
+//when difficulty is set to hard
+var randomize = function() {
+	for (var i = cards.length - 1; i > 0; i--) {
+		var j = Math.floor(Math.random() * (i + 1));
+		var temp = cards[i];
+		cards[i] = cards[j];
+		cards[j] = temp;
+		resetBoard();
 	}
 };
 
